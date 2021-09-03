@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountains</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <section class="zoom">
+        <img src="./images/mountain1.png" id="layer1" alt="">
+        <img src="./images/mountain2.png" id="layer2" alt="">
+        <img src="./images/text.png" id="text" alt="">
+    </section>  
+    <section class="content">
+        <h2>Parallax</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptatum esse at possimus, excepturi necessitatibus quaerat facilis, veniam ab nostrum omnis aspernatur placeat et! Vel, officia excepturi. Saepe asperiores doloribus in fugit sapiente maxime corporis vitae, quam repellendus reprehenderit doloremque natus architecto tempora cumque amet. Tempora eum harum error magnam? Maiores fugiat blanditiis assumenda magni sunt culpa, nesciunt, nobis quasi recusandae ea itaque, animi inventore veritatis. Numquam, ex corrupti accusamus ea dolores delectus quisquam vel similique optio unde nulla quidem maxime earum in laboriosam provident eum officia ipsa. Amet quod rerum quas distinctio quasi esse sapiente corporis, suscipit voluptatibus, praesentium asperiores odit reiciendis reprehenderit aperiam. Dolorem molestiae numquam quae iusto obcaecati, repellendus architecto animi quis sed incidunt fugiat dolor harum consequuntur id saepe sunt? Harum aliquam dicta vitae reiciendis labore perspiciatis temporibus assumenda corporis eligendi quae pariatur ullam nisi provident iste, veniam, facilis laboriosam molestiae architecto eius non porro maiores nobis unde. Placeat enim officiis a dignissimos, fuga distinctio nulla expedita blanditiis molestiae velit, voluptatem voluptatibus quod. Officiis temporibus enim maxime vel aperiam minus voluptatum tenetur. Ratione sed aspernatur voluptatibus, pariatur architecto recusandae? Recusandae accusantium ex atque laboriosam. Iure nostrum magni facere voluptate nulla, laudantium enim voluptatum ducimus mollitia iusto!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur alias tempore officia mollitia aut laborum voluptates dolore quis numquam eligendi excepturi a aspernatur ipsum atque quia, ratione fugit officiis consequuntur iure est molestiae. Voluptates ullam suscipit nam, enim molestias placeat distinctio, maiores aut corrupti sapiente inventore dolor nihil officia hic, adipisci nemo voluptas. Dolore vitae porro totam, alias impedit esse deserunt quod. Nulla praesentium quidem aspernatur deserunt beatae? Iusto quibusdam sit aliquam est iure laborum quaerat unde non accusantium impedit culpa alias at beatae molestiae libero, neque asperiores! Maiores id dignissimos reprehenderit sequi qui saepe? Ipsam unde explicabo eos est neque assumenda perspiciatis aliquam blanditiis aut, incidunt facere nostrum voluptatem dolorem suscipit doloribus aliquid doloremque odit possimus debitis illo veritatis. Recusandae corrupti natus fugiat dolores! Quibusdam reprehenderit ipsa repellat consectetur possimus assumenda, eaque adipisci, laboriosam, suscipit magni similique beatae sint doloribus voluptatum dolore perspiciatis quo neque unde minus corrupti inventore ullam modi a nemo. Itaque ea eum repellendus reiciendis odit praesentium est repellat tempore ipsam, earum eveniet ratione cum dicta accusamus natus tempora nobis sint placeat nulla consequatur sed molestiae. Fugit, ipsa assumenda dolorum enim sunt consequuntur eum error nesciunt quibusdam natus animi, ex accusantium alias placeat impedit voluptas? Incidunt.</p>
+    </section>  
+
+    <script type="text/javascript">
+        var layer1 = document.getElementById('layer1')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll', function(e){
+            var offset = window.pageYOffset
+            scroll = offset;
+            layer1.style.width = (100 + scroll/7) + '%';
+        });
+
+        var layer2 = document.getElementById('layer2')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll', function(e){
+            var offset = window.pageYOffset
+            scroll = offset;
+            layer2.style.width = (100 + scroll/7) + '%';
+            layer2.style.left = scroll/70 + '%';
+        });
+
+        var text = document.getElementById('text')
+        scroll = window.pageYOffset;
+        document.addEventListener('scroll', function(e){
+            var offset = window.pageYOffset
+            scroll = offset;
+            layer2.style.width = (100 + scroll/7) + '%';
+            text.style.top = -scroll/7 + '%';
+        });
+    </script>
+</body>
+</html>

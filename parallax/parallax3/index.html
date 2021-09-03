@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Time</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="logo">Jungle Madness</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Adventures</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+        <img src="./images/bird1.png" id="bird1" alt="">
+        <img src="./images/bird2.png" id="bird2" alt="">
+        <img src="./images/forest.png" id="forest" alt="">
+        <a href="#" id="btn">Explore</a>
+        <img src="./images/rocks.png" id="rocks" alt="">
+        <img src="./images/water.png" id="water" alt="">
+    </section>
+
+    <div class="sec">
+        <h2>Paralax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero accusantium maxime, vitae expedita voluptatem, sapiente aliquid sed corporis esse debitis nulla rem ab illum distinctio autem id tempora eum possimus. Asperiores, pariatur ullam? Nihil distinctio dignissimos, nisi nostrum eligendi excepturi facere debitis eveniet. Laudantium libero in odio nihil fugiat. Molestias, fugiat nostrum vel recusandae sint dolore illum eveniet praesentium vero dicta reprehenderit assumenda ut mollitia iste non magni consequatur amet? Pariatur quis aperiam aliquam adipisci aspernatur quo nihil expedita eum nam magni accusamus sequi fugit repellendus necessitatibus fuga et, iusto qui? Eos est itaque perferendis? Atque sit alias molestias culpa! <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cumque animi sapiente id voluptatem omnis voluptates tempore maiores! Inventore quia deserunt sequi animi ea in non delectus modi numquam hic. Culpa voluptatum porro nam voluptatem maiores exercitationem magni tempore corrupti facere cum architecto, totam consequatur dolorum accusantium fugit a mollitia, voluptas eos sunt necessitatibus sed corporis quibusdam beatae expedita. Sint fuga nostrum maiores dolorum quo? Molestias fugit aspernatur, dolorum et, voluptatum quod, nemo expedita qui reprehenderit saepe fuga. Explicabo sunt corrupti aliquam recusandae illum, amet nemo natus vitae sed possimus veniam doloribus. Reprehenderit ex dolorem dolorum nisi repellat reiciendis tenetur?<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae debitis minus iste explicabo iusto natus harum porro temporibus, ipsum laborum sit, odit, dolorum earum molestiae consequuntur excepturi? Illum sequi, voluptates perferendis, beatae dignissimos omnis modi iste quo suscipit dolores dolorem velit id. Repellendus mollitia dolorem officia tempora alias quaerat voluptatum architecto modi quas nam? Ipsa deleniti perferendis non exercitationem molestias, eligendi natus voluptatem ducimus, facilis quam ut! Dolorum dolorem porro fuga autem adipisci eius, deleniti eligendi vel eveniet, delectus temporibus. Iusto ea aliquid quam. Enim quas laborum reiciendis ducimus temporibus cupiditate ad animi minima at aliquid illo similique, nulla facilis. <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, natus magnam expedita eum necessitatibus numquam ipsam illo reprehenderit! Dolores, vero quibusdam! Possimus nobis ipsum consequatur quia, necessitatibus id aut iste laudantium earum et expedita hic deserunt nam repellat minima! Sapiente sunt vero delectus pariatur architecto voluptas vel ad accusantium, aspernatur doloribus in, excepturi iste? Inventore quo repellat deserunt debitis adipisci accusamus, consequuntur sunt perspiciatis corporis laboriosam natus modi itaque quis fugit autem aliquam veniam magni! At eaque earum enim dicta molestiae ea minima fuga aliquid, numquam sit inventore asperiores. Animi ea repellat hic, ad harum laboriosam voluptatibus illo tempore velit?</p>
+    </div>
+
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            rocks.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        });
+    </script>
+</body>
+</html>
